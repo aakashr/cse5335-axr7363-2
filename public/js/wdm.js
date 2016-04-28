@@ -1,4 +1,4 @@
-var delay = 300;
+var delay = 500;
 var counter = 0;
 var t;
 
@@ -34,8 +34,8 @@ function callAjax(table){
                     success: function(data) {
         				$.each(data, function(i, info) {
                             if(counter%20 == 0)
- 	                           randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-                            Row = '<tr bgcolor=' + randomColor + ' id=' + info.m_id + ' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
+ 	                           //randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                            Row = '<tr id=' + info.m_id + ' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
                         });
                         
                     },
