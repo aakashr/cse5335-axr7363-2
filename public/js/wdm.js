@@ -1,4 +1,4 @@
-var delay = 500;
+var delay = 700;
 var counter = 0;
 var t;
 
@@ -41,7 +41,7 @@ function callAjax(table){
         table.append(Row)         
         if(counter>=20){
         	ToBeRemovedRow = document.getElementById(counter-20);        	
-        	$("#" + (counter - 20)).hide(100);
+        	$("#" + (counter - 20)).hide(200);
         	//ToBeRemovedRow.parentNode.removeChild(ToBeRemovedRow);        	
         }
 
