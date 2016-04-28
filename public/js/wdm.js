@@ -15,8 +15,7 @@ $(document).ready(function() {
 });
 
 var table;
-var randomColor;
-var newRow;
+var Row;
 
 function callAjax(table){
     if(counter<=100){
@@ -32,12 +31,12 @@ function callAjax(table){
                     },
                     success: function(data) {
         				$.each(data, function(i, info) {
-                            newRow = '<tr id='+info.m_id+' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
+                            Row = '<tr id='+info.m_id+' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
                         });
                         
                     },
                 });        
-        table.append(newRow);        
+        table.append(Row);        
         
     } else{
         clearTimeout(t);
