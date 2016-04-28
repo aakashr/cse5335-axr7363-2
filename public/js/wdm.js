@@ -41,7 +41,7 @@ function callAjax(table){
         table.append(Row)         
         if(counter>=20){
         	ToBeRemovedRow = document.getElementById(counter-20);        	
-        	$("#" + (counter - 20)).hide(300);
+        	$("#" + (counter - 20)).hide(100);
         	//ToBeRemovedRow.parentNode.removeChild(ToBeRemovedRow);        	
         }
 
