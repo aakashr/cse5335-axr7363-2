@@ -3,13 +3,13 @@ var counter = 0;
 var t;
 
 $(document).ready(function() {
-    $('#myButton').on('click', function(event) {    	
+    $('#myBtn').on('click', function(event) {    	
         event.preventDefault();
 		$('#dynamictable').append('<table id="myTable" border="3" style="width:100%;background: black"></table>');
         table = $('#dynamictable').children();
     	table.append('<tr id=0 align="center"><th>Movie ID</th><th>Name of the Movie</th><th>Year of Release</th></tr>');
         callAjax(table)
-        $('#myButton').hide();
+        $('#myBtn').hide();
 
     });
 });
