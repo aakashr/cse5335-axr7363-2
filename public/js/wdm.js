@@ -1,4 +1,4 @@
-var delay = 700;
+var delay = 900;
 var counter = 0;
 var t;
 
@@ -7,7 +7,7 @@ $(document).ready(function() {
         event.preventDefault();
 		$('#tableData').append('<table id="myTable" border="3" style="width:100%;background: black"></table>');
         table = $('#tableData').children();
-    	table.append('<tr id=0 align="center"><th>Movie ID</th><th>Name of the Movie</th><th>Year of Release</th></tr>');
+    	table.append('<tr id="Head" align="center"><th>Movie ID</th><th>Name of the Movie</th><th>Year of Release</th></tr>');
         callAjax(table)
         $('#myBtn').hide();
 
@@ -32,7 +32,7 @@ function callAjax(table){
                     	M_ID:counter
                     },
                     success: function(data) {
-        				$.each(data, function(i, info) {                             	                           
+        				$.each(data, function(i, info) {                             	                                                       
                             Row = '<tr id=' + info.m_id + ' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
                         });
                         
@@ -41,7 +41,7 @@ function callAjax(table){
         table.append(Row)         
         if(counter>=20){
         	ToBeRemovedRow = document.getElementById(counter-20);        	
-        	$("#" + (counter - 20)).hide(200);
+        	$("#" + (counter - 20)).hide(300);
         	//ToBeRemovedRow.parentNode.removeChild(ToBeRemovedRow);        	
         }
 
