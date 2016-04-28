@@ -1,5 +1,5 @@
-var my_delay = 300;
-var count = 0;
+var delay = 300;
+var counter = 0;
 var t;
 
 $(document).ready(function() {
@@ -19,16 +19,16 @@ var randomColor;
 var newRow;
 
 function callAjax(table){
-    if(count<=100){
-        count = count+1;        
-        t = setTimeout(function(){callAjax(table);}, my_delay );
+    if(counter<=100){
+        counter = counter+1;        
+        t = setTimeout(function(){callAjax(table);}, delay );
     	$.ajax({
                     url: "https://pacific-thicket-25365.herokuapp.com/db",
                     type: "GET",
                     contentType: "application/json; charset=utf-8",
                     dataType: 'json',
                     data: {
-                    	M_ID:count
+                    	M_ID:counter
                     },
                     success: function(data) {
         				$.each(data, function(i, info) {
