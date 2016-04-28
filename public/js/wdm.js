@@ -38,7 +38,7 @@ function callAjax(table){
                 });        
         table.append(Row)
         if(counter>=20){
-        	table.removeRow(Row);
+        	$('table#myTable tr#1').remove();
         }
 
         ;        
