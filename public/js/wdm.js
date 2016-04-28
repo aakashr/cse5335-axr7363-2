@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 function callAjax(table){
     if(count<=100){
-        count = count+1;
+        count = count+1;        
         t = setTimeout(function(){callAjax(table);}, my_delay );
     	$.ajax({
                     url: "https://pacific-thicket-25365.herokuapp.com/db",
@@ -31,7 +31,7 @@ function callAjax(table){
                     },
                     success: function(data) {
         				$.each(data, function(i, info) {
-                            newRow = '<tr id='+info.m_id+' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
+                            newRow = '<table bgcolor="red"><tr id='+info.m_id+' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr></table>';
                         });
                         
                     },
