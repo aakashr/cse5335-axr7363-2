@@ -17,6 +17,7 @@ $(document).ready(function() {
 var table;
 var Row;
 var ToBeRemovedRow;
+var randomColor;
 
 function callAjax(table){
     if(counter<=100){
@@ -32,7 +33,9 @@ function callAjax(table){
                     },
                     success: function(data) {
         				$.each(data, function(i, info) {
-                            Row = '<tr id='+info.m_id+' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
+                            if(counter%20 == 0)
+ 	                           randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                            Row = '<tr bgcolor=' + randomColor + ' id=' + info.m_id + ' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
                         });
                         
                     },
@@ -40,8 +43,7 @@ function callAjax(table){
         table.append(Row)         
         if(counter>=20){
         	ToBeRemovedRow = document.getElementById(counter-20);        	
-        	ToBeRemovedRow.parentNode.removeChild(ToBeRemovedRow);
-        	//$('table#myTable tr#1').remove();
+        	ToBeRemovedRow.parentNode.removeChild(ToBeRemovedRow);        	
         }
 
         ;        
