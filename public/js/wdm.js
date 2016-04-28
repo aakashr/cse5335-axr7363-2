@@ -40,7 +40,7 @@ function callAjax(table){
         table.append(Row)
         var 
         if(counter>=20){
-        	ToBeRemovedRow = 'table#myTable tr#1'
+        	ToBeRemovedRow = 'table#myTable tr#1';
         	$(ToBeRemovedRow).remove();
         }
 
