@@ -1,4 +1,4 @@
-var delay = 900;
+var delay = 700;
 var counter = 0;
 var t;
 
