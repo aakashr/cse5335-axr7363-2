@@ -40,10 +40,9 @@ function callAjax(table){
                 });        
         table.append(Row)
         if(counter>=20){
-        	ToBeRemovedRow = document.getElementById(counter-20);        	
+        	//ToBeRemovedRow = document.getElementById(counter-20);        	
         	$("#" + (counter - 20)).hide(300);
-        	$("#" + counter).show(300);
-        	//ToBeRemovedRow.parentNode.removeChild(ToBeRemovedRow);        	
+        	$("#" + counter).show(300);        	
         }
 
         ;        
