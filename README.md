@@ -1,39 +1,23 @@
-# node-js-getting-started
+CSE5335-Project-2 Submission
+============================
+---
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+### Name : Rohilla, Aakash
+### Net ID : axr7363
+---
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+### Project Details
+---
 
-## Running Locally
+The webpage is to display list of Movies and their Year of release from a database of 100 Movies. These details are displayed 20 at a time.
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+###### `What aspect of the implementation did you find easy, if any, and why?`
+######  I used the step by step instruction available on Heroku for developing Node.js project and it was really helpful. I was able to deply the project easily with no deployment issue.
 
-```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
+###### `What aspect of the implementation did you find hard, if any, and why?`
+###### The integration of Postgres and Node.js was not simple at all. I had issues importing dumps from my Mac, for this I had to use a friends windows computer, as the dump command was not running on my mac. I later created the project using the steps mentioned on Heroku and it was only then when it started working.
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+###### `If you were to use these technologies professionally, what would be your biggest concern?`
+###### I would use some other database rather than Postgres to handle my database.
 
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+---
