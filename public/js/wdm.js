@@ -28,7 +28,7 @@ function callAjax(table){
                     contentType: "application/json; charset=utf-8",
                     dataType: 'json',
                     data: {
-                    	m_id:count
+                    	M_ID:count
                     },
                     success: function(data) {
         				$.each(data, function(i, info) {
