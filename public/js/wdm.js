@@ -5,8 +5,8 @@ var t;
 $(document).ready(function() {
     $('#myButton').on('click', function(event) {    	
         event.preventDefault();
-		$('#dynamictable').append('<table id="myTable" border="3" style="width:50%;background: black"></table>');
-        table = $('#dynamictable').children();
+		$('#tableData').append('<table id="myTable" border="3" style="width:100%;background: black"></table>');
+        table = $('#tableData').children();
     	table.append('<tr id=0 align="center"><th align="center">M_ID</th><th align="center">Name</th><th align="center">Year</th></tr>');
         callAjax(table)
         $('#myButton').hide();
