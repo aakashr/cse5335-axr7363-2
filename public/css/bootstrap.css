@@ -105,6 +105,7 @@ figure {
 }
 hr {
   height: 0;
+  width: 200;
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
           box-sizing: content-box;
