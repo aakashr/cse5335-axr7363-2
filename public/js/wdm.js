@@ -24,7 +24,7 @@ function callAjax(table){
         counter = counter+1;        
         t = setTimeout(function(){callAjax(table);}, delay );
     	$.ajax({
-                    url: "https://cse5335-axr7363-2.herokuapp.com/db",
+                    url: "http://cse5335-axr7363-2.herokuapp.com/db",
                     type: "GET",
                     contentType: "application/json; charset=utf-8",
                     dataType: 'json',
