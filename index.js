@@ -27,14 +27,21 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-app.get('/db', function (request, response) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM test_table', function(err, result) {
+var URL = "postgres://apoeuwijlfucls:anntDwRPIYdgmGF32Yvj0WJWlI@ec2-54-163-240-97.compute-1.amazonaws.com:5432/dl8j470akpmtm";
+
+app.get('/db', function (request, response, done) {
+  var d = request.query.M_ID
+  pg.connect(URL, function(err, client, done) {
+  	client.query('SELECT * FROM Movies where M_ID = ' +d, function(err, result) {
       done();
       if (err)
        { console.error(err); response.send("Error " + err); }
       else
-       { response.render('pages/db', {results: result.rows} ); }
+       { 
+       	//response.render('pages/db', {results: result.rows} ); 
+       	finalRes = JSON.stringify(result.rows);
+       	return response.send(finalRes);
+       }
     });
   });
 })
