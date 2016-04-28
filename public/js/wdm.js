@@ -32,9 +32,7 @@ function callAjax(table){
                     	M_ID:counter
                     },
                     success: function(data) {
-        				$.each(data, function(i, info) {
-                            if(counter%20 == 0)
- 	                           //randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        				$.each(data, function(i, info) {                             	                           
                             Row = '<tr id=' + info.m_id + ' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
                         });
                         
