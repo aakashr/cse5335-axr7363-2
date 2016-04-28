@@ -16,6 +16,7 @@ $(document).ready(function() {
 
 var table;
 var Row;
+var ToBeRemovedRow;
 
 function callAjax(table){
     if(counter<=100){
@@ -36,8 +37,10 @@ function callAjax(table){
                         
                     },
                 });        
-        table.append(Row)        
-        if(counter>=20){        	
+        table.append(Row)
+        var 
+        if(counter>=20){
+        	ToBeRemovedRow = document.getElementById(counter-20);        	
         	$('table#myTable tr#1').remove();
         }
 
