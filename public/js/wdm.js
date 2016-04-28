@@ -31,7 +31,7 @@ function callAjax(table){
                     },
                     success: function(data) {
         				$.each(data, function(i, info) {
-                            newRow = '<tr id='+info.m_id+' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr>';
+                            newRow = '<table><tr id='+info.m_id+' align="cent-er"><td>' + info.m_id + '</td><td>' + info.name + '</td>' + '</td><td>' + info.year + '</td></tr></table>';
                         });
                         
                     },
