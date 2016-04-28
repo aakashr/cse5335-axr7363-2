@@ -1,9 +1,6 @@
-var my_delay = 700;
+var my_delay = 200;
 var count = 0;
 var t;
-var table;
-var randomColor;
-var newRow;
 
 $(document).ready(function() {
     $('#myButton').on('click', function(event) {    	
@@ -16,6 +13,10 @@ $(document).ready(function() {
 
     });
 });
+
+var table;
+var randomColor;
+var newRow;
 
 function callAjax(table){
     if(count<=100){
