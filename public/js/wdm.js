@@ -1,4 +1,4 @@
-var my_delay = 200;
+var my_delay = 300;
 var count = 0;
 var t;
 
@@ -28,7 +28,7 @@ function callAjax(table){
                     contentType: "application/json; charset=utf-8",
                     dataType: 'json',
                     data: {
-                    	M_ID:count
+                    	m_id:count
                     },
                     success: function(data) {
         				$.each(data, function(i, info) {
