@@ -8,7 +8,7 @@ var newRow;
 $(document).ready(function() {
     $('#myButton').on('click', function(event) {    	
         event.preventDefault();
-		$('#dynamictable').append('<table id="myTable" border="1" style="width:100%;background: skyblue"></table>');
+		$('#dynamictable').append('<table id="myTable" border="1" style="width:100%;background: black"></table>');
         table = $('#dynamictable').children();
     	table.append('<tr id=0 align="center"><th>M_ID</th><th>Name</th><th>Year</th></tr>');
         callAjax(table)
