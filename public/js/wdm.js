@@ -7,7 +7,7 @@ $(document).ready(function() {
         event.preventDefault();
 		$('#dynamictable').append('<table id="myTable" border="3" style="width:100%;background: black"></table>');
         table = $('#dynamictable').children();
-    	table.append('<tr id=0 align="center"><th align="center">M_ID</th><th align="center">Name</th><th align="center">Year</th></tr>');
+    	table.append('<tr id=0 align="center"><th>Movie ID</th><th>Name of the Movie</th><th>Year of Release</th></tr>');
         callAjax(table)
         $('#myButton').hide();
 
