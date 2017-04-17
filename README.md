@@ -3,7 +3,6 @@ CSE5335-Project-2 Submission
 ---
 
 ### Name : Rohilla, Aakash
-### Net ID : axr7363
 ---
 
 ### Project Details
